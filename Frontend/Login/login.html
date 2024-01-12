@@ -3,42 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <link rel="stylesheet" 
-    href="../style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>SignUp</h1>
-        <form onsubmit="registerUser(event)">
-        <div class="txt_field">
-            <input type="text" name="name" id="name" required>
-            <span></span>
-            <label for="name">Name</label>
-        </div>
+        <h1>Login</h1>
+        <form onsubmit="loginUser(event)">
         <div class="txt_field">
             <input type="email" name="email" id="email" required>
             <span></span>
             <label for="email">Email</label>
         </div>
         <div class="txt_field">
-            <input type="tel" name="phonenumber" id="phonenumber" required>
-            <span></span>
-            <label for="phonenumber">Phone Number</label>
-        </div>
-        <div class="txt_field">
             <input type="password" class="form-control" name="password" id="password" required>
             <span></span>
             <label for="password">Password</label>
         </div>
-        <button type="submit" class="btn btn-primary">Signup</button>
+        <button type="submit" class="btn btn-primary">Login</button>
         <div class="login_link">
-            Already have an account ? <a href="../Login/login.html">Login Here</a>
+            New User ? <a href="../Signup/signup.html">Signup Here</a>
         </div>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="signup.js" ></script>
+    <script src="login.js" ></script>
 </body>
 </html>

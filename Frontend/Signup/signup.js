@@ -17,6 +17,7 @@ async function registerUser(event) {
         console.log(response);
         if(response.status === 201) {
             alert(response.data.message)
+            window.location.href='../Login/login.html'
         } else if(response.status === 202) {
             alert(response.data.message)
             throw new Error('Failed to signup');
