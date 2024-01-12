@@ -10,7 +10,9 @@ const sequelize = require('./backend/Utils/database');
 const User = require('./backend/Models/user');
 const userRoutes = require('./backend/Routes/user');
 
-app.use(cors());
+app.use(cors({
+    origin:'*'
+}));
 app.use(bodyParser.json({extended:false}))
 
 app.use('/user',userRoutes)
