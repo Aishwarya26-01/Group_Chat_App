@@ -12,10 +12,12 @@ async function loginUser(event) {
         const response = await axios.post("http://localhost:3000/user/login", obj)
             if(response.status === 200) {
                 alert(response.data.message)
+                localStorage.setItem('token',response.data.token)
             }
         }
     catch(err){
         console.log(JSON.stringify(err))
-        document.body.innerHTML += `<div style="color:red;">${err.message} <div>`;
+        alert(err.response.data.message)
+        document.body.innerHTML += `<div style="color:red;">${err.response.data.message} <div>`;
     }
 }
