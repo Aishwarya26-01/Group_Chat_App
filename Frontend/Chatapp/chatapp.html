@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat App</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            header{
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+            .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #ffd7d7;
+            }
+            .chat_messages{
+                display: flex;
+                flex-direction: column;
+            }
+            .user_input{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 6px;
+                background-color: #fff;
+                width: 100%;
+                text-align: center;
+            }
+            input{
+                position: relative;
+                margin-left: 50px;
+                height: 35px;
+                width:70%;
+                margin-top: 5px;
+            }
+            button{
+                padding: 10px 10px;
+                background-color: #007bff;
+                color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: #013266;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Chat App</h1>
+        </header>
+        <div class="container">
+            <div class="chat_messages">
+                <!-- Chat Messages -->
+            </div>
+            <div class="user_input">
+                <input type="text" id="message" placeholder="Type your message...">
+                <button id="button" onclick="userMessage(event)">Send</button>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="chatapp.js" ></script>
+    </body>
+</html>

@@ -13,6 +13,7 @@ async function loginUser(event) {
             if(response.status === 200) {
                 alert(response.data.message)
                 localStorage.setItem('token',response.data.token)
+                window.location.href="../Chatapp/chatapp.html"
             }
         }
     catch(err){
