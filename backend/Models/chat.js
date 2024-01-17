@@ -8,7 +8,8 @@ const Chat = sequelize.define('chat',{
         autoIncrement: true,
         allowNull: false
     },
-    message: Sequelize.STRING
+    message: Sequelize.STRING,
+    name: Sequelize.STRING
 });
 
 module.exports = Chat;

@@ -5,5 +5,6 @@ const chatController = require('../Controllers/chat');
 const middleware = require('../Middleware/auth');
 
 router.post('/sendmessage', middleware.authenticate, chatController.sendMessage);
+router.get('/getmessage', middleware.authenticate, chatController.getMessage);
 
 module.exports = router;

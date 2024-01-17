@@ -40,7 +40,7 @@ const addUser = async (req, res) => {
 }
 
 const generateAccessToken = (id) => {
-    return jwt.sign({userId: id}, 'secretkey');
+    return jwt.sign({userId: id}, "secretkey");
 }
 
 const loginUser = async (req, res) => {
