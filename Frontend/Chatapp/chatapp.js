@@ -54,3 +54,21 @@ window.addEventListener('DOMContentLoaded',async()=>{
                                   </div>`
     }
 })
+
+async function callApi(){
+    const token=localStorage.getItem('token');
+    try {
+        const response = await axios.get('http://localhost:3000/chat/getmessage', {headers:{"Authorization":token}});
+        console.log(response.data.allChat);
+        if(response.status === 202){
+            displayMessage(response.data.allChat)
+        }
+
+    } catch (error) {
+        document.body.innerHTML+=`<div style="color: red;text-align: center;">
+                                      <h3>${error}</h3>
+                                  </div>`
+    }
+}
+
+setInterval(callApi,1000);
